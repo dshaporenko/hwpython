@@ -10,7 +10,7 @@ def main():
         text = get_html(l)
         title, topic, author, date, month, year = get_meta(text)
         text = clean_text(text)
-        path = r'C:\TomskieNovosti\plain' + os.sep + year + os.sep + month
+        path = r'C:\Tomskie_Novosti\plain' + os.sep + year + os.sep + month
         if not os.path.exists(path):
             os.makedirs(path)
         name = create_name(path)
@@ -18,7 +18,7 @@ def main():
         metadata(path, author, title, date, topic, l, year)
         plain(text, author, title, date, topic, l, path)
         time.sleep(2)
-    path = r'C:\TomskieNovosti\plain'
+    path = r'C:\Tomskie_Novosti\plain'
     mystem_xml(path)
     mystem_plain(path)
 
