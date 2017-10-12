@@ -51,6 +51,6 @@ def create_name(path):
 
 def metadata(path, author, title, date, topic, link, year):
     row = '%s\t%s\t\t\t%s\t%s\tпублицистика\t\t\t%s\t\tнейтральный\tн-возраст\tн-уровень\tгородская\t%s\tТомские Новости\t\t%s\tгазета\tРоссия\tТомская область\tru\n'
-    meta_path = r'C:\TomskieNovosti\metadata.csv'
+    meta_path = r'C:\Tomskie_Novosti\metadata.csv'
     with open(meta_path, 'a', encoding = 'utf-8') as meta:
         meta.write(row % (path, author, title, date, topic, link, year))
