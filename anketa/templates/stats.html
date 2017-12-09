@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Лингвистическая анкета</title>
+</head>
+
+<h4 align="center"><a href="http://127.0.0.1:5000/">Анкета</a>  <a href="http://127.0.0.1:5000/stats">Статистика</a>  <a href="http://127.0.0.1:5000/json">json</a>  <a href="http://127.0.0.1:5000/search">Поиск</a></h4>
+<h2>Цвета</h2>
+
+<body bgcolor=ADADAD>
+<p><b>На этой странице вы можете увидеть результаты опроса</b></p>
+<p>Количество ответов: {{ num }}</p>
+<table border=1>
+<tr>
+<td></td>
+<td><img src="{{url_for('static', filename='black.jpg')}}" /></td>
+<td><img src="{{url_for('static', filename='white.jpg')}}" /></td>
+<td><img src="{{url_for('static', filename='red.jpg')}}" /></td>
+<td><img src="{{url_for('static', filename='blue.jpg')}}" /></td>
+<td><img src="{{url_for('static', filename='green.jpg')}}" /></td>
+<td><img src="{{url_for('static', filename='yellow.jpg')}}" /></td>
+<td><img src="{{url_for('static', filename='purple.jpg')}}" /></td>
+<td><img src="{{url_for('static', filename='pink.jpg')}}" /></td>
+</tr>
+{% for key, value in statistics.items() %}
+	<tr>
+	<td>
+	{{ key }}</td> 
+	{% for key1, value1 in value.items() %}
+		<td>
+		{% for key2, value2 in value1.items() %}
+			{{ key2 }}: {{ value2 }}<br>
+		{% endfor %}
+		</td>
+	{% endfor %}
+	</tr>
+{% endfor %}
+</table>
+
+	
+
+
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Лингвистическая анкета</title>
+</head>
+
+<h4 align="center"><a href="http://127.0.0.1:5000/">Анкета</a>  <a href="http://127.0.0.1:5000/stats">Статистика</a>  <a href="http://127.0.0.1:5000/json">json</a>  <a href="http://127.0.0.1:5000/search">Поиск</a></h4>
+
+<body bgcolor=ADADAD>
+<p>Вы ищете слово <b>{{ word }}</b></p>
+{% if check %}
+	{% for key, value in colors.items() %}
+		<p>Оно было использовано для обозначения этого цвета:<br> 
+		{% if key == 'color1' %}
+			<p><img src="{{url_for('static', filename='black.jpg')}}" /></p>
+		{% elif key == 'color2' %}
+			<p><img src="{{url_for('static', filename='white.jpg')}}" /></p>
+		{% elif key == 'color3' %}
+			<p><img src="{{url_for('static', filename='red.jpg')}}" /></p>
+		{% elif key == 'color4' %}
+			<p><img src="{{url_for('static', filename='blue.jpg')}}" /></p>
+		{% elif key == 'color5' %}
+			<p><img src="{{url_for('static', filename='green.jpg')}}" /></p>
+		{% elif key == 'color6' %}
+			<p><img src="{{url_for('static', filename='yellow.jpg')}}" /></p>
+		{% elif key == 'color7' %}
+			<p><img src="{{url_for('static', filename='purple.jpg')}}" /></p>
+		{% elif key == 'color8' %}
+			<p><img src="{{url_for('static', filename='pink.jpg')}}" /></p>
+		{% endif %}
+		<p>В следующих языках:</p>
+		{% for v in value %}
+			{{ v }}<br>
+		{% endfor %}</p>
+		<p>В таблице можно увидеть какие слова были использованы в других языках для обозначения этого цвета</p>
+		<table border=1>
+		{% for key1, value1 in colors1[key].items() %}
+			<tr>
+			<td>
+			{{ key1 }}</td>
+			{% for val in value1 %}
+				<td>{{ val }}</td>
+			{% endfor %}
+			</tr>
+		{% endfor %}
+		</table>
+	{% endfor %}
+{% else %}
+	<p>По Вашему запросу ничего не найдено</p>
+{% endif %}
+
+</body>
+ </html>
