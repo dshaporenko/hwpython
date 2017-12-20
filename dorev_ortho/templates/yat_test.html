@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Дореволюционная орфография</title>
+	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+</head>
+
+<div class="page-header">
+	<h1 align="center">Тест про букву "ѣ"</h1>
+</div>
+
+<body>
+<ul class="nav nav-pills">
+  <li role="presentation"><a href="http://127.0.0.1:5000/">Главная</a></li>
+  <li role="presentation"><a href="http://127.0.0.1:5000/ortho">Ссылка</a></li>
+  <li role="presentation" class="active"><a href="http://127.0.0.1:5000/yat_test">Тест</a></li>
+</ul>
+<div class = "container">
+	<p>Проверьте свое знание того, в каких словах раньше писалась буква "ѣ".</p>
+<form action="http://127.0.0.1:5000/test_result" method="GET">
+	<p><b>Апрель</b><br>
+    <input type="radio" name="answer1" value="correct">Апрѣль<Br>
+    <input type="radio" name="answer1" value="wrong">Апрель<Br></p>
+	<p><b>Ябеда</b><br>
+    <input type="radio" name="answer2" value="wrong">Ябѣда<Br>
+    <input type="radio" name="answer2" value="correct">Ябеда<Br></p>
+	<p><b>Венец</b><br>
+    <input type="radio" name="answer3" value="correct">Вѣнецъ<Br>
+    <input type="radio" name="answer3" value="wrong">Венецъ<Br>
+	<input type="radio" name="answer3" value="wrong">Венѣцъ<Br>
+	<input type="radio" name="answer3" value="wrong">Вѣнѣцъ<Br></p>
+	<p><b>Дева</b><br>
+    <input type="radio" name="answer4" value="correct">Дѣва<Br>
+    <input type="radio" name="answer4" value="wrong">Дева<Br></p>
+	<p><b>Железа</b><br>
+    <input type="radio" name="answer5" value="wrong">Жѣлеза<Br>
+    <input type="radio" name="answer5" value="wrong">Желѣза<Br>
+	<input type="radio" name="answer5" value="correct">Желeза<Br>
+	<input type="radio" name="answer5" value="wrong">Жѣлѣза<Br></p>
+	<p><b>Крепость</b><br>
+    <input type="radio" name="answer6" value="wrong">Крепость<Br>
+    <input type="radio" name="answer6" value="correct">Крѣпость<Br></p>
+	<p><b>Мельница</b><br>
+    <input type="radio" name="answer7" value="correct">Мельница<Br>
+    <input type="radio" name="answer7" value="wrong">Мѣльница<Br></p>
+	<p><b>Беда</b><br>
+    <input type="radio" name="answer8" value="wrong">Беда<Br>
+    <input type="radio" name="answer8" value="correct">Бѣда<Br></p>
+	<p><b>Звёзды</b><br>
+    <input type="radio" name="answer9" value="correct">Звѣзды<Br>
+    <input type="radio" name="answer9" value="wrong">Звёзды<Br></p>
+	<p><b>Мел</b><br>
+    <input type="radio" name="answer10" value="correct">Мѣлъ<Br>
+    <input type="radio" name="answer10" value="wrong">Мелъ<Br></p>
+	<p><button type="submit" class="btn btn-default">Отправить</button></p>
+</form>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</body>
+</html>
