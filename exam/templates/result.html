@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Англо-тайский словарь</title>
+</head>
+
+<h2>Англо-тайский словарь</h2>
+
+<body>
+<p>Ваше слово на английском: <b>{{ word }}</b><p>
+{% if res != [] %}
+	<p>Перевод на тайский:<br>
+	{% for r in res %}
+		<b>{{ r }}</b><br>
+	{% endfor %}
+	</p>
+{% else %}
+<p>В словаре нет запрашиваемого слова.</p>
+{% endif %}
+</body>
+ </html>
