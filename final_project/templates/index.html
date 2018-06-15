@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Анкета "Старый"</title>
+	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse" role="navigation">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">Навигация</a>
+  </div>
+
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="https://immense-island-70237.herokuapp.com/">Анкета</a></li>
+      <li><a href="https://immense-island-70237.herokuapp.com/stat">Результаты</a></li>
+    </ul>
+  </div>
+</nav>
+
+<h2 align="center">Анкета "Старый"</h2>
+
+<div class = "container">
+	<p>Заполните, пожалуйста, анкету про обозначения признака "старый".</p>
+	<form action="https://immense-island-70237.herokuapp.com/answers" method="GET">
+		<p><b>Ваш язык:</b> <input type="text" name="language" value=""></p>	
+		<p><b>Какое слово вы бы использовали в Вашем языке на месте слова "старый" в каждом из следующих предложений?</b></p>
+		<p>1. <b>Старые</b> люди всегда простужаются.</p>
+		<p><input type="text" name="old1" value=""></p>	
+		<p>2. <b>Старые</b> женщины выглядят моложе старых мужчин.</p>
+		<p><input type="text" name="old2" value=""></p>	
+		<p>3. <b>Старый</b> друг всегда поможет.</p>
+		<p><input type="text" name="old3" value=""></p>
+		<p>4. Его <b>старая</b> жена была добрая, а новая красивая, но злая.</p>
+		<p><input type="text" name="old4" value=""></p>	
+		<p>5. <b>Старый</b> директор отпускал нас с работы пораньше, а новый никогда так не делает.</p>
+		<p><input type="text" name="old5" value=""></p>	
+		<p>6. <b>Старые</b> мастера умели делать очень красивую посуду из дерева и серебра, сейчас все эти вещи хранятся в музее.</p>
+		<p><input type="text" name="old6" value=""></p>	
+		<p>7. Около  нашего дома растет <b>старый</b> дуб, мы думаем, что ему 200 лет.</p>
+		<p><input type="text" name="old7" value=""></p>
+		<p>8. У нас в шкафу висит <b>старое</b> пальто, его давно пора выбросить, потому что оно не греет и промокает.</p>
+		<p><input type="text" name="old8" value=""></p>
+		<p>9. Раньше тут был ручей, теперь он течет в другом месте. Это не канал, а его <b>старое</b> русло. </p>
+		<p><input type="text" name="old9" value=""></p>
+		<p>10. <b>Старые</b> монеты были из серебра.</p>
+		<p><input type="text" name="old10" value=""></p>
+		<p>11. <b>Старые</b> компьютеры работали очень медленно.</p>
+		<p><input type="text" name="old11" value=""></p>
+		<p>12. <b>Старые</b> холодильники очень шумели.</p>
+		<p><input type="text" name="old12" value=""></p>
+		<p>13. <b>Старое</b> вино дорогое и очень крепкое, потому что долго хранилось </p>
+		<p><input type="text" name="old13" value=""></p>
+		<p>14. С прошлого года у нас осталось много <b>старой</b> картошки.</p>
+		<p><input type="text" name="old14" value=""></p>	
+		<p>15. <b>Старое</b> воспоминание всегда очень грустное.</p>
+		<p><input type="text" name="old15" value=""></p>	
+		<p>16. <b>Старые</b> времена давно прошли, потому что люди очень изменились.</p>
+		<p><input type="text" name="old16" value=""></p>	
+		<p>17. Сейчас я живу в новой квартире, а в <b>старой</b> квартире никто уже не живет, тот дом скоро сломают.</p>
+		<p><input type="text" name="old17" value=""></p>	
+		<p><input type="submit" class="btn btn-default"></p>
+	</form>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</body>
+</html>

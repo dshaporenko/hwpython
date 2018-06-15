@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Анкета "Старый"</title>
+	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+</head>
+
+<body>
+<nav class="navbar navbar-inverse" role="navigation">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">Навигация</a>
+  </div>
+
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+      <li><a href="https://immense-island-70237.herokuapp.com/">Анкета</a></li>
+      <li class="active"><a href="https://immense-island-70237.herokuapp.com/stat">Результаты</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class = "container">
+	<p><b>На этой странице вы можете увидеть результаты опроса</b></p>
+	<p>Количество ответов: {{ num }}</p>
+</div>
+<table class="table table-bordered">
+<tr>
+<td></td>
+<td>Старый - старый человек</td>
+<td>Старый друг/ старый охотник (давний)</td>
+<td>Прежний - старый директор/жена</td>
+<td>Старинный - старые мастера</td>
+<td>Старый - старый дом, лес</td>
+<td>Ветхий - старая тряпка</td>
+<td>Прежний - старое русло</td>
+<td>Старинный - старые монеты</td>
+<td>Старые воспоминания</td>
+<td>Старые времена</td>
+</tr>
+{% for key, value in statistics.items() %}
+	<tr>
+	<td>
+	{{ key }}</td> 
+	{% for key1, value1 in value.items() %}
+		<td>
+		{% for key2, value2 in value1.items() %}
+			{{ key2 }}: {{ value2 }}<br>
+		{% endfor %}
+		</td>
+	{% endfor %}
+	</tr>
+{% endfor %}
+</table>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</body>
+</html>
